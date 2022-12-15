@@ -7,7 +7,7 @@ Text can be **bold**, _italic_, or ~~strikethrough~~ or <kbd>keyboard shortcuts<
 
 [Link to another page](./another-page.html).
 
-[Link to a test post]({% post_url | relative_url 2022-12-15-welcome-to-jekyll %})
+[Link to a test post]({% relative_url 2022-12-15-welcome-to-jekyll %})
 
 There should be whitespace between paragraphs.
 
