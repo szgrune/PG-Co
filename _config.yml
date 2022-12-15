@@ -24,6 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
 baseurl: "/PG-Co/" # the subpath of your site, e.g. /blog
 url: "https://szgrune.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: date
 
 show_downloads: false
 
