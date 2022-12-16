@@ -32,7 +32,9 @@
         <div class="menu">
 
         <a>Projects</a>
-          
+        
+        <span>{% site.data.samplelist.docs.size %}</span>
+
         <ul>
             {% for item in site.data.samplelist.docs %}
                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
