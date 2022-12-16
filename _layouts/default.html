@@ -28,8 +28,18 @@
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
+        
+        <div class="menu">
+          
+        <ul>
+            {% for item in site.data.samplelist.docs %}
+               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        </div>
+
+        <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
 
         {% if site.show_downloads %}
         <ul class="downloads">
