@@ -31,13 +31,14 @@
         
         <div class="menu">
 
-        <a>Projects</a>
+        <a onclick="" class="dropdown">Projects</a>
+        {% for item in site.data.projectmenu.docs %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
         
-        <ul>
-            {% for item in site.data.homemenu.docs %}
-               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
+        {% for item in site.data.homemenu.docs %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
 
         </div>
 
