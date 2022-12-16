@@ -34,7 +34,7 @@
         <a>Projects</a>
         
         <ul>
-            {% for item in site.pages %}
+            {% for item in site.data.homemenu.docs %}
                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
         </ul>

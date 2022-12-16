@@ -1,0 +1,8 @@
+docs_list_title: Home Page Menu
+docs:
+
+- title: About
+  url: /about.html
+
+- title: Contact
+  url: /contact.html
