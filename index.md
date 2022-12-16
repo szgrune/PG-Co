@@ -5,7 +5,7 @@ layout: default
 Theme can be **dark** or **light** the color is dependent on your system theme so go ahead turn it dark.
 Text can be **bold**, _italic_, or ~~strikethrough~~ or <kbd>keyboard shortcuts</kbd>.
 
-[Link to another page](./another-page.html).
+[Link to another page](./another-page.html)
 
 [Link to a test post]({% post_url 2022-12-15-welcome-to-jekyll | relative_url %})
 
