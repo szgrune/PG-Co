@@ -37,11 +37,13 @@
         
         <div class="menu">
 
-        <a href="javascript:;" onclick="showProjects()" id="dropdown">Projects</a>
-        {% for item in site.data.projectmenu.docs %}
-          <li class="dropdown-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-        
+        <a href="javascript:;" onclick="showProjects()">Projects</a>
+        <div id="dropdown">
+          {% for item in site.data.projectmenu.docs %}
+            <li class="dropdown-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </div>
+
         {% for item in site.data.homemenu.docs %}
           <a href="{{ item.url }}">{{ item.title }}</a>
         {% endfor %}
