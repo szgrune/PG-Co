@@ -41,7 +41,7 @@ a {
 
 a:hover, a:focus {
   color: var(--clr-a-text-hvr);
-  font-weight: bold;
+  text-decoration: underline;
 }
 
 a small {
