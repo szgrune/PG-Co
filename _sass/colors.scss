@@ -66,7 +66,7 @@ hvr -> hover
   
   @mixin light-colors {
     // buttons
-    --L-a-text: 35%;
+    --L-a-text: 0%;
     --L-buttons-main-bg: 96%;
     --L-buttons-main-border: 88%;
     --L-buttons-main-text: 40%;
@@ -96,7 +96,7 @@ hvr -> hover
 
 @mixin dark-colors {
   // buttons
-  --L-a-text: 60%;
+  --L-a-text: 100%;
   --L-buttons-main-bg: 17%;
   --L-buttons-main-border: 26%;
   --L-buttons-main-text: 76%;

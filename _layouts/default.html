@@ -41,7 +41,7 @@
           <a href="javascript:;" onclick="showProjects()" class="menu-item">Projects</a>
           <ul id="dropdown" class="dropdown-content">
             {% for item in site.data.projectmenu.docs %}
-              <li class="dropdown-item" href="{{ item.url }}">{{ item.title }}</li>
+              <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
             {% endfor %}
           </ul>
 
