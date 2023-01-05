@@ -29,19 +29,21 @@
   <body>
     <div class="wrapper">
       <header>
+        {% comment %}
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        {% endcomment %}
 
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
+          <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
         {% endif %}
         
         <div class="menu">
           <a href="javascript:;" onclick="showProjects()" class="menu-item">Projects</a>
-          <div id="dropdown" class="dropdown-content">
+          <ul id="dropdown" class="dropdown-content">
             {% for item in site.data.projectmenu.docs %}
-              <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+              <li class="dropdown-item" href="{{ item.url }}">{{ item.title }}</li>
             {% endfor %}
-          </div>
+          </ul>
 
           {% for item in site.data.homemenu.docs %}
             <a href="{{ item.url }}" class="menu-item">{{ item.title }}</a>
