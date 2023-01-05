@@ -9,11 +9,14 @@ a {
 
 ul {
     list-style-type: none;
-    
+    line-height: 2;
 }
 
 .menu-item {
     display: block;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 2;;
 }
 
 .dropdown-content {
