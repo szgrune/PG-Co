@@ -3,6 +3,10 @@
 
 @import "jekyll-theme-minimal";
 
+a {
+    font-size: 16px;
+}
+
 .menu-item {
     display: block;
 }
@@ -14,3 +18,4 @@
 .show {
     display: block;
 }
+
