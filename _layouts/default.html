@@ -38,7 +38,7 @@
         {% endif %}
         
         <div class="menu">
-          <a href="javascript:;" onclick="showProjects()" class="menu-item">Projects</a>
+          <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
           <ul id="dropdown" class="dropdown-content">
             {% for item in site.data.projectmenu.docs %}
               <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
