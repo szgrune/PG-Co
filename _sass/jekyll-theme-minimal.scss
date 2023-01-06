@@ -36,12 +36,13 @@ h3, h4, h5, h6 {
 
 a {
   color:var(--clr-a-text);
-  text-decoration:none;
+  text-decoration: underline;
+  text-decoration-color: hsl(200, 100%, var(--L-a-text), 0%);
   transition: 0.5s;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-color: hsl(200, 100%, var(--L-a-text), 100%);
   transition: 0.5s;
 }
 
