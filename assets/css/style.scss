@@ -30,6 +30,9 @@ ul {
 #projects:hover:after, #projects:focus:after {
     opacity: 1;
     right: 20px;
+}
+
+#projects:focus:after {
     pointer-events: none;
 }
 

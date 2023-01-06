@@ -39,15 +39,9 @@ a {
   text-decoration:none;
 }
 
-a:hover {
+a:hover, a:focus {
   color: var(--clr-a-text-hvr);
   text-decoration: underline;
-}
-
-a:focus {
-  color: var(--clr-a-text-hvr);
-  text-decoration: underline;
-  pointer-events: none;
 }
 
 a small {
