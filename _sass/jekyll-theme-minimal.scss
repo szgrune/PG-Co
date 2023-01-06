@@ -37,12 +37,12 @@ h3, h4, h5, h6 {
 a {
   color:var(--clr-a-text);
   text-decoration: underline;
-  text-decoration-color: hsl(200, 100%, var(--clr-a-text) / 0%);
+  text-decoration-color: hsla(200, 100%, var(--clr-a-text), 0);
   transition: 0.5s;
 }
 
 a:hover {
-  text-decoration-color: hsl(200, 100%, var(--clr-a-text) / 100%);
+  text-decoration-color: hsla(200, 100%, var(--clr-a-text), 1);
   transition: 0.5s;
 }
 
