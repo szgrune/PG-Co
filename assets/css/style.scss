@@ -19,10 +19,6 @@ ul {
     line-height: 2;;
 }
 
-#projects:focus {
-    text-decoration: none;
-}
-
 #projects:after {
     content: '∨';
     position: absolute;
