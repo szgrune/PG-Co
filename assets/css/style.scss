@@ -19,6 +19,10 @@ ul {
     line-height: 2;;
 }
 
+#projects:focus {
+    text-decoration: none;
+}
+
 #projects:after {
     content: '∨';
     position: absolute;
@@ -29,7 +33,7 @@ ul {
 
 #projects:hover:after, #projects:focus:after {
     opacity: 1;
-    right: 20px;
+    right: 10px;
 }
 
 #projects:focus:after {
@@ -38,6 +42,10 @@ ul {
 
 .dropdown-content {
     display: none;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .show {
