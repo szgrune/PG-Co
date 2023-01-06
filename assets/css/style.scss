@@ -27,9 +27,9 @@ ul {
     transition: 0.5s;
 }
 
-#projects:hover:after {
+#projects:hover:after, #projects:focus:after {
     opacity: 1;
-    right: 10px;
+    right: 20px;
 }
 
 .dropdown-content {
