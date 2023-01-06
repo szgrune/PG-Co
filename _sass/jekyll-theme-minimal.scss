@@ -37,13 +37,12 @@ h3, h4, h5, h6 {
 a {
   color:var(--clr-a-text);
   text-decoration: underline;
-  text-decoration-color: hsla(200, 100%, var(--clr-a-text), 0);
+  text-decoration-color: transparent;
   transition: 0.5s;
 }
 
 a:hover {
-  text-decoration-color: hsla(200, 100%, var(--clr-a-text), 1);
-  transition: 0.5s;
+  text-decoration-color: var(--clr-a-text);
 }
 
 a:hover, a:focus {
