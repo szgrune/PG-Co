@@ -39,6 +39,9 @@ a {
   text-decoration: underline;
   text-decoration-color: transparent;
   transition: 0.5s;
+
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
 }
 
 a:hover {
