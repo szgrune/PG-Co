@@ -30,6 +30,7 @@ ul {
 #projects:hover:after, #projects:focus:after {
     opacity: 1;
     right: 20px;
+    pointer-events: none;
 }
 
 .dropdown-content {
