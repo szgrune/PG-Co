@@ -23,7 +23,8 @@ ul {
     content: '∨';
     position: absolute;
     opacity: 0;
-    padding-left: 5px;
+    padding-left: 7px;
+    transition: 0.5s;
 }
 
 #projects:hover:after {
