@@ -2,10 +2,10 @@ docs_list_title: Project Menu
 docs:
 
 - title: Kimino Drinks
-  url: /PG-Co/kimino.html
+  url: /PG-Co/kimino.md
 
 - title: Open Library
-  url: /PG-Co/openlibrary.html
+  url: /PG-Co/openlibrary.md
 
 - title: Onside
-  url: /PG-Co/onside.html
+  url: /PG-Co/onside.md
