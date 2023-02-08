@@ -17,30 +17,15 @@ ul {
 }
 
 .menu-item {
+    color: #c2c2c2;
     display: block;
     font-size: 32px;
     font-weight: bold;
     line-height: 2;
 }
 
-#projects:after {
-    content: '∨';
-    position: absolute;
-    opacity: 0;
-    padding-left: 7px;
-    transition: 0.5s;
-}
-
-#projects:hover:after {
-    opacity: 1;
-}
-
 .dropdown-content {
     display: none;
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 .show {
