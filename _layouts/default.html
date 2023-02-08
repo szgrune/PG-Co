@@ -22,6 +22,7 @@
     <script>
       function showProjects() {
         document.getElementById("dropdown").classList.toggle("show");
+        document.getElementById("content").style.display = 'none';
         return false;
       }
     </script>
@@ -39,11 +40,6 @@
         
         <div class="menu">
           <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
-          <ul id="dropdown" class="dropdown-content">
-            {% for item in site.data.projectmenu.docs %}
-              <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-          </ul>
 
           {% for item in site.data.homemenu.docs %}
             <a href="{{ item.url }}" class="menu-item">{{ item.title }}</a>
@@ -60,6 +56,11 @@
         </ul>
         {% endif %}
       </header>
+      <ul id="dropdown" class="dropdown-content">
+        {% for item in site.data.projectmenu.docs %}
+          <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
       <section id="content">
 
       {{ content }}
