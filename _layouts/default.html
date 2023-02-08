@@ -56,15 +56,16 @@
         </ul>
         {% endif %}
       </header>
-      <ul id="dropdown" class="dropdown-content">
-        {% for item in site.data.projectmenu.docs %}
-          <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-      <section id="content">
+      <section>
 
-      {{ content }}
-
+        <ul id="dropdown" class="dropdown-content">
+          {% for item in site.data.projectmenu.docs %}
+            <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <div  id="content">
+          {{ content }}
+        </div>
       </section>
       <footer>
 
