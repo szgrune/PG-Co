@@ -23,7 +23,6 @@
   <body>
     <div class="wrapper">
       <header>
-
         {% comment %}
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         {% endcomment %}
@@ -45,6 +44,7 @@
           <span class="slider round"></span>
           <span class="labels" data-on="dark" data-off="light"></span>
         </label>
+
         <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
 
         {% if site.show_downloads %}
@@ -99,7 +99,6 @@
 
     function lightDarkToggle() {
       if (document.documentElement.classList.contains("dark-mode")){
-
         document.documentElement.classList.remove("dark-mode");
         localStorage.setItem("darkMode", false);
       } else {
@@ -107,11 +106,12 @@
         localStorage.setItem("darkMode", true);
       }
     }
-    
+
     let clicked = false;
     let nav = document.getElementsByClassName('menu-item');
     let pnav = document.getElementsByClassName("dropdown-item");
     for (let i = 0; i < nav.length; i++){
+      nav[i].style.color = 'grey';
       nav[i].addEventListener('mouseover', highlight);
       nav[i].addEventListener('mouseout', unHighlight);
     }
@@ -119,6 +119,8 @@
       pnav[i].addEventListener('mouseover', pHighlight);
       pnav[i].addEventListener('mouseout', pUnHighlight);
     }
+
+    document.getElementById("About").style.color = '';
 
     function showProjects() {
       clicked = !clicked;
@@ -132,6 +134,7 @@
         for (let i = 0; i < nav.length; i++) {
           if (nav[i] != this) nav[i].style.color = 'grey';
         }
+        this.style.color = '';
       } else {
         document.getElementById("projects").style.color = 'grey';
         this.style.color = '';
@@ -141,8 +144,9 @@
     function unHighlight(){
       if (!clicked){
         for (let i = 0; i < nav.length; i++) {
-          nav[i].style.color = '';
+          nav[i].style.color = 'grey';
         }
+        document.getElementById("About").style.color = '';
       } else {
         for (let i = 0; i < nav.length; i++) {
           nav[i].style.color = 'grey';
