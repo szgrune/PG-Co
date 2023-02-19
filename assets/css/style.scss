@@ -100,10 +100,10 @@ input:checked + .slider:before {
 
 .switch .labels {
     position: absolute;
+    cursor: pointer;
     top: 7px;
     left: 0;
     width: 100%;
-    height: 100%;
     transition: all 0.4s ease-in-out;
 }
 
