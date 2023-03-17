@@ -53,3 +53,27 @@
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf') format('truetype'),
        url('../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans') format('svg');
 }
+
+@font-face {
+  font-family: 'Folio Book';
+  src: url('../fonts/Folio-Book/Folio-Book-BT.eot');
+  src: url('../fonts/Folio-Book/Folio-Book-BT.eot?#iefix') format('embedded-opentype'),
+       local('Folio Book'),
+       local('Folio-Book'),
+       url('../fonts/Folio-Book/Folio-Book-BT.woff2') format('woff2'),
+       url('../fonts/Folio-Book/Folio-Book-BT.woff') format('woff'),
+       url('../fonts/Folio-Book/Folio-Book-BT.ttf') format('truetype'),
+       url('../fonts/Folio-Book/Folio-Book-BT.svg#FolioXBdBT') format('svg');
+}
+
+@font-face {
+  font-family: 'Folio XBd BT';
+  src: url('../fonts/Folio-XBd-BT/folioxb.eot');
+  src: url('../fonts/Folio-XBd-BT/folioxb.eot?#iefix') format('embedded-opentype'),
+       local('Folio XBd BT'),
+       local('Folio-XBd-BT'),
+       url('../fonts/Folio-XBd-BT/folioxb.woff2') format('woff2'),
+       url('../fonts/Folio-XBd-BT/folioxb.woff') format('woff'),
+       url('../fonts/Folio-XBd-BT/folioxb.ttf') format('truetype'),
+       url('../fonts/Folio-XBd-BT/folioxb.svg#FolioXBdBT') format('svg');
+}

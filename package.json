@@ -1,0 +1,26 @@
+{
+  "name": "pg-co",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szgrune/PG-Co.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szgrune/PG-Co/issues"
+  },
+  "homepage": "https://github.com/szgrune/PG-Co#readme",
+  "dependencies": {
+    "terser": "^5.16.5"
+  }
+}
