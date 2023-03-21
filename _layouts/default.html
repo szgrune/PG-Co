@@ -11,8 +11,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v="              | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
@@ -28,11 +30,41 @@
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         {% endcomment %}
 
-        {% if site.logo %}
-          <a href="{{ "/" | absolute_url }}"><img src="{{site.logo | relative_url}}" alt="Logo" /></a>
-        {% endif %}
-        
-        <div class="menu">
+        <div id="menuToggle">
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <div id="burger">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          
+
+          
+            <ul id="menu">
+              <a href="javascript:;" onclick="showBurgerProjects()" id="projects" class="menu-item">Projects</a>
+              <ul id="burgerDropdown" class="dropdown-content">
+                {% for item in site.data.projectmenu.docs %}
+                  <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+              {% for item in site.data.homemenu.docs %}
+                <a href="{{ item.url }}" id="{{ item.title }}" class="menu-item">{{ item.title }}</a>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+  
+        <a href="{{ "/" | absolute_url }}">
+          <img class="logo" id="lightmode-logo" src="{{site.blacklogo | relative_url}}" alt="Logo" />
+          <img class="logo" id="darkmode-logo" src="{{site.whitelogo | relative_url}}" alt="Logo" />
+        </a>
+
+        <div id="desktopMenu" class="menu">
           <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
 
           {% for item in site.data.homemenu.docs %}
@@ -124,6 +156,12 @@
       clicked = !clicked;
       document.getElementById("dropdown").classList.toggle("show");
       document.getElementById("content").classList.toggle("hide");
+      return false;
+    }
+
+    function showBurgerProjects() {
+      clicked = !clicked;
+      document.getElementById("burgerDropdown").classList.toggle("show");
       return false;
     }
 

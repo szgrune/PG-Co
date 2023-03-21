@@ -20,7 +20,8 @@
 
 title: P+G Co.
 email: samzgrunebaum@gmail.com
-logo: /assets/img/logo.png
+blacklogo: ./assets/img/black-logo.png
+whitelogo: ./assets/img/white-logo.png
 description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 url: "https://szgrune.github.io"
 baseurl: "/PG-Co"
@@ -33,7 +34,7 @@ google_analytics:
 remote-theme: "godalming123/minimal"
 
 plugins:
-  - jekyll-remote-theme  
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -43,7 +44,12 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - bin
+  - config
+  - vite.config.ts
+  - tmp
+  - Procfile.dev
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

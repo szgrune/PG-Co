@@ -3,17 +3,13 @@
 
 @import "jekyll-theme-minimal";
 
-a {
-    font-size: 16px;
-}
-
 ul {
     list-style-type: none;
     line-height: 2;
 }
 
-.menu {
-    margin-top: 5vh;
+.logo {
+    max-width: 75%;
 }
 
 .menu-item {
@@ -43,14 +39,55 @@ ul {
     display: block;
 }
 
+.split-img-text {
+    display: flex;
+
+    figure, p {
+        flex: 0 0 50%;
+    }
+}
+
+@media print, screen and (max-width: 720px){
+    .split-img-text {
+        display: block;
+
+        figure, p {
+            display: inline-block;
+        }
+    }
+}
+
 .hide {
     display: none;
 }
 
+#lightmode-logo {
+    display: block;
+}
+
+#darkmode-logo {
+    display: none;
+}
+
+#menuToggle{
+    display: none;
+}
+
+.dark-mode {
+    #darkmode-logo {
+        display: block;
+    }
+
+    #lightmode-logo {
+        display: none;
+    }
+}
+
+
 .switch {
     position: fixed;
     display: inline-block;
-    top: 50px;
+    top: 70px;
     right: 25px;
     width: 80px;
     height: 34px;
@@ -101,6 +138,7 @@ input:checked + .slider:before {
 }
 
 .switch .labels {
+    font-size: 14px;;
     position: absolute;
     cursor: pointer;
     top: 7px;
@@ -110,6 +148,7 @@ input:checked + .slider:before {
 }
 
 .switch .labels::after {
+    font-size: 14px;
     content: attr(data-off);
     position: absolute;
     color: white;
@@ -119,6 +158,7 @@ input:checked + .slider:before {
 }
 
 .switch .labels::before {
+    font-size: 14px;
     content: attr(data-on);
     color: black;
     position: absolute;
@@ -142,4 +182,155 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+@media print, screen and (max-width: 948px) {
+    .logo {
+        width: 50%;
+        margin: auto;
+    }
+
+    #desktopMenu {
+        display: none;
+    }
+
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 10px;
+    
+    z-index: 1;
+    
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+
+    #burger input
+    {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    
+    cursor: pointer;
+    
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    
+    -webkit-touch-callout: none;
+    }
+
+    #menuToggle {
+        #burger {
+            position: fixed;
+            top: 58px;
+            left: 50px;
+        }
+    }
+
+    /*
+    * Just a quick hamburger
+    */
+    #burger span
+    {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    
+    background: var(--clr-a-text);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+    }
+
+    #burger span:first-child
+    {
+    transform-origin: 0% 0%;
+    }
+
+    #burger span:nth-last-child(2)
+    {
+    transform-origin: 0% 100%;
+    }
+
+    /* 
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    #burger input:checked ~ span
+    {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    #burger input:checked ~ span:nth-last-child(3)
+    {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Ohyeah and the last one should go the other direction
+    */
+    #burger input:checked ~ span:nth-last-child(2)
+    {
+    transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #menu
+    {
+    position: absolute;
+    width: 300px;
+    height: calc(100vh);
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    top: 8px;
+    left: 0;
+    background: hsl(0, 0%, var(--L-text));
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    
+    transform-origin: 0% 0%;
+    transform: translate(-110%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #burger input:checked ~ #menu
+    {
+    transform: none !important;
+    }
+
+    .switch {
+        top: 60px;
+    }
+
+    .dropdown-content{
+        position: initial;
+    }
 }

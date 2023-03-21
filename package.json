@@ -21,6 +21,12 @@
   },
   "homepage": "https://github.com/szgrune/PG-Co#readme",
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "terser": "^5.16.5"
+  },
+  "devDependencies": {
+    "vite": "^4.2.1",
+    "vite-plugin-ruby": "^3.2.1"
   }
 }

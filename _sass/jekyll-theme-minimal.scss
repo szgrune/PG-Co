@@ -4,7 +4,7 @@
 body {
   background-color: var(--clr-bg);
   padding:50px;
-  font: 14px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 23px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--clr-text);
   font-weight:400;
 }
@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size:28px;
+  font-size:36px;
 }
 
 h2 {
@@ -57,7 +57,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:75vw;
+  width:65vw;
   margin:0 auto;
 }
 
@@ -103,6 +103,24 @@ th {
 
 img {
   max-width:100%;
+}
+
+figure {
+  margin: 10px;
+}
+
+#content {
+  img {
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+
+  figcaption {
+    font-size: 14px;
+  }
 }
 
 kbd {
@@ -187,7 +205,7 @@ strong {
 }
 
 section {
-  width:50vw;
+  width:40vw;
   float:right;
   padding-bottom:50px;
 }
@@ -211,11 +229,22 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+@media print, screen and (max-width: 1200px) {
+  body {
+    font: 20px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+} 
+
+@media print, screen and (max-width: 1100px) {
+  body {
+    font: 19px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+} 
+
 @media print, screen and (max-width: 960px) {
 
-  div.wrapper {
-    width:auto;
-    margin:0;
+  body {
+    font: 30px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   header, section, footer {
@@ -248,7 +277,13 @@ footer {
 
 @media print, screen and (max-width: 720px) {
   body {
+    font: 22px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     word-wrap:break-word;
+  }
+
+  div.wrapper {
+    width:auto;
+    margin:0;
   }
 
   header {
@@ -266,6 +301,7 @@ footer {
 
 @media print, screen and (max-width: 480px) {
   body {
+    font: 16px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding:15px;
   }
 
