@@ -244,7 +244,7 @@ footer {
 @media print, screen and (max-width: 960px) {
 
   body {
-    font: 30px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 25px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   header, section, footer {
@@ -253,8 +253,9 @@ footer {
     width:auto;
   }
 
-  header {
-    padding-right:320px;
+  .logo-padding {
+    padding-right:50px;
+    padding-left: 50px;
   }
 
   section {
@@ -275,6 +276,13 @@ footer {
   }
 }
 
+@media print, screen and (max-width: 800px) {
+  body {
+    font: 22px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    word-wrap:break-word;
+  }
+}
+
 @media print, screen and (max-width: 720px) {
   body {
     font: 22px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -287,11 +295,23 @@ footer {
   }
 
   header {
-    padding:0;
+    position: fixed;
+    float: left;
+    top: 0px;
+    left: 0px;
+    height: 120px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background: var(--clr-bg);
+    opacity: 0.9;
   }
 
   header ul, header p.view {
     position:static;
+  }
+
+  section {
+    padding-top: 100px;
   }
 
   pre, code {
@@ -303,6 +323,11 @@ footer {
   body {
     font: 16px/1.5 "Folio Book", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding:15px;
+  }
+
+  header {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .downloads {

@@ -57,13 +57,16 @@
               {% endfor %}
             </ul>
           </div>
-        </div>
-  
-        <a href="{{ "/" | absolute_url }}">
-          <img class="logo" id="lightmode-logo" src="{{site.blacklogo | relative_url}}" alt="Logo" />
-          <img class="logo" id="darkmode-logo" src="{{site.whitelogo | relative_url}}" alt="Logo" />
-        </a>
 
+          <label class="switch">
+            <input id="lightDark" type="checkbox" onclick="lightDarkToggle(this)">
+            <span class="slider round"></span>
+            <span class="labels" data-on="dark" data-off="light"></span>
+          </label>
+        </div>
+          <img class="logo" id="lightmode-logo" src="{{site.blacklogo | relative_url}}" alt="Logo" onclick="goHome()"/>
+          <img class="logo" id="darkmode-logo" src="{{site.whitelogo | relative_url}}" alt="Logo" onclick="goHome()"/>
+        
         <div id="desktopMenu" class="menu">
           <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
 
@@ -72,11 +75,7 @@
           {% endfor %}
         </div>
 
-        <label class="switch">
-          <input id="lightDark" type="checkbox" onclick="lightDarkToggle(this)">
-          <span class="slider round"></span>
-          <span class="labels" data-on="dark" data-off="light"></span>
-        </label>
+        
         <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
 
         {% if site.show_downloads %}
@@ -199,6 +198,10 @@
         for (let i = 0; i < pnav.length; i++) {
             pnav[i].style.color = '';
         }
+    }
+
+    function goHome(){
+      window.location.href = "{{ "/" | absolute_url }}";
     }
   </script>
 </html>

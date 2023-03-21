@@ -9,6 +9,7 @@ ul {
 }
 
 .logo {
+    cursor: pointer;
     max-width: 75%;
 }
 
@@ -184,7 +185,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-@media print, screen and (max-width: 948px) {
+@media print, screen and (max-width: 960px) {
     .logo {
         width: 50%;
         margin: auto;
@@ -307,7 +308,7 @@ input:checked + .slider:before {
     padding-top: 125px;
     top: 8px;
     left: 0;
-    background: hsl(0, 0%, var(--L-text));
+    background: var(--clr-code-bg);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -332,5 +333,50 @@ input:checked + .slider:before {
 
     .dropdown-content{
         position: initial;
+    }
+}
+
+@media print, screen and (max-width: 720px) {
+    #menuToggle {
+        #burger {
+            position: relative;
+            top: 50%;
+            left: -25px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .switch {
+        position: relative;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-120%);
+        float: right;
+    }
+
+    .logo {
+        max-height: 110px;
+        width: 30%;
+        position: relative;
+        z-index: 1000;
+        left: 50%;
+        transform: translate(-50%,-10%);
+        margin: 0;
+    }
+}
+
+@media print, screen and (max-width: 480px) {
+    #menuToggle {
+        #burger {
+            left: -25px;
+        }
+    }
+    
+    .logo {
+        width: 50%;
+    }
+
+    .switch {
+        right: -15px;
     }
 }
