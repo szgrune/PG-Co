@@ -27,7 +27,7 @@ ul {
 
 .dropdown-item {
     font-family: 'Noto Sans';
-    font-size: 32px;
+    font-size: 25px;
     font-weight: bold;
     line-height: 2;
 }
@@ -70,6 +70,17 @@ ul {
     display: none;
 }
 
+.chevron {
+    transform: scale(1.5);
+    transition: transform 0.5s;
+}
+
+.rotate {
+    transform: scale(1.5) rotate(-180deg);
+    -ms-transform: scale(1.5) rotate(-180deg);
+    -webkit-transform: scale(1.5) rotate(-180deg);
+}
+
 #menuToggle{
     display: none;
 }
@@ -80,6 +91,10 @@ ul {
     }
 
     #lightmode-logo {
+        display: none;
+    }
+
+    #lightmode-chev-burger {
         display: none;
     }
 }
@@ -192,6 +207,10 @@ input:checked + .slider:before {
     }
 
     #desktopMenu {
+        display: none;
+    }
+
+    .desktopSwitch {
         display: none;
     }
 

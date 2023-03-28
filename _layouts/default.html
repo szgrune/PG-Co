@@ -17,6 +17,8 @@
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v="              | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -46,7 +48,23 @@
 
           
             <ul id="menu">
-              <a href="javascript:;" onclick="showBurgerProjects()" id="projects" class="menu-item">Projects</a>
+              <a href="javascript:;" onclick="showBurgerProjects()" id="burger-projects" class="menu-item">
+                Projects
+                <svg
+                  id="chev-burger"
+                  class="chevron"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
               <ul id="burgerDropdown" class="dropdown-content">
                 {% for item in site.data.projectmenu.docs %}
                   <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
@@ -59,7 +77,7 @@
           </div>
 
           <label class="switch">
-            <input id="lightDark" type="checkbox" onclick="lightDarkToggle(this)">
+            <input id="burger-lightDark" type="checkbox" onclick="lightDarkToggle(this)">
             <span class="slider round"></span>
             <span class="labels" data-on="dark" data-off="light"></span>
           </label>
@@ -69,13 +87,22 @@
         
         <div id="desktopMenu" class="menu">
           <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
-
+          <ul id="dropdown" class="dropdown-content">
+            {% for item in site.data.projectmenu.docs %}
+              <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
           {% for item in site.data.homemenu.docs %}
             <a href="{{ item.url }}" id="{{ item.title }}" class="menu-item">{{ item.title }}</a>
           {% endfor %}
         </div>
-
-        
+        <div class="desktopSwitch">
+          <label class="switch">
+            <input id="lightDark" type="checkbox" onclick="lightDarkToggle(this)">
+            <span class="slider round"></span>
+            <span class="labels" data-on="dark" data-off="light"></span>
+          </label>
+        </div>
         <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
 
         {% if site.show_downloads %}
@@ -86,16 +113,12 @@
         </ul>
         {% endif %}
       </header>
-      <section>
-
-        <ul id="dropdown" class="dropdown-content">
-          {% for item in site.data.projectmenu.docs %}
-            <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <div  id="content">
-          {{ content }}
-        </div>
+      <section id="content">
+        {% if page.title != "Index" %}
+        <a href="{{ "/" | absolute_url }}">Home</a> &raquo; {{ page.title }}
+        <hr style="margin-top: 20px">
+        {% endif %}
+        {{ content }}
       </section>
       <footer>
 
@@ -122,9 +145,11 @@
     
     if (localStorage.getItem("darkMode") === 'true') {
       document.documentElement.classList.add('dark-mode');
+      document.getElementById("burger-lightDark").checked = true;
       document.getElementById("lightDark").checked = true;
     } else {
       document.documentElement.classList.remove('dark-mode');
+      document.getElementById("burger-lightDark").checked = false;
       document.getElementById("lightDark").checked = false;
     }
 
@@ -154,12 +179,12 @@
     function showProjects() {
       clicked = !clicked;
       document.getElementById("dropdown").classList.toggle("show");
-      document.getElementById("content").classList.toggle("hide");
       return false;
     }
 
     function showBurgerProjects() {
       clicked = !clicked;
+      document.getElementById("chev-burger").classList.toggle("rotate");
       document.getElementById("burgerDropdown").classList.toggle("show");
       return false;
     }
@@ -170,6 +195,7 @@
           if (nav[i] != this) nav[i].style.color = 'grey';
         }
       } else {
+        document.getElementById("burger-projects").style.color = 'grey';
         document.getElementById("projects").style.color = 'grey';
         this.style.color = '';
       }
@@ -184,6 +210,7 @@
         for (let i = 0; i < nav.length; i++) {
           nav[i].style.color = 'grey';
         }
+        document.getElementById("burger-projects").style.color = '';
         document.getElementById("projects").style.color = '';
       }
     }

@@ -22,6 +22,8 @@ title: P+G Co.
 email: samzgrunebaum@gmail.com
 blacklogo: ./assets/img/black-logo.png
 whitelogo: ./assets/img/white-logo.png
+chevron: ./assets/img/chevron-down.png
+whitechevron: ./assets/img/white-chevron-down.png
 description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 url: "https://szgrune.github.io"
 baseurl: "/PG-Co"
