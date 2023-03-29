@@ -7,7 +7,7 @@ title: Index
   {% for image in site.static_files %}
     {% if image.path contains 'img/slider' %}
       <div class="carousel-cell">
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" style="height: 400px"/>
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image"/>
       </div>
     {% endif %}
   {% endfor %}
