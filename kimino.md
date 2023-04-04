@@ -4,11 +4,11 @@ title: Kimino Drinks
 ---
 
 ![](./assets/img/Kimino About Screenshot.png)
-# Approach
+# APPROACH
 
 Using tools ranging from Google Analytics to GA Instance and our own qualitative findings based on our training in e-commerce best practices, we sought to create an enhanced user experience of Kimino online by enhancing content, communication and technology.  
 
-# Art Direction
+# ART DIRECTION 
 
 <div class="split-img-text">
     <figure>
