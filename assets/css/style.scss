@@ -208,6 +208,9 @@ input:checked + .slider:before {
     }
 }
 
+/* move page dots into carousel */
+.flickity-page-dots { bottom: 10px!important; }
+
 @media print, screen and (max-width: 960px) {
     .logo {
         width: 50%;

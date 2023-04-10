@@ -3,7 +3,7 @@ layout: default
 title: Index
 ---
 
-<div class="main-carousel" style="margin-top: 100px">
+<div class="main-carousel" style="z-index: -1; margin-top: 100px">
   {% for image in site.static_files %}
     {% if image.path contains 'img/slider' %}
       <div class="carousel-cell">
