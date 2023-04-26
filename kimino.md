@@ -7,8 +7,7 @@ title: Kimino Drinks
 
 # ABSTRACT
 
-We overhauled Kimino's digital profile by redesigning their website and introducing Klaviyo email marketing to their customer base. We used data collected with tools ranging from Google Analytics to General Instance to craft a unique user experience centered around maximizing e-commerce revenues while remaining faithful to Kimino's elegant identity and emphasis of traiditional Japanese farming methods. 
-# ART DIRECTION 
+After a comprehensive site audit, we overhauled Kimino’s e-commerce with a web redesign and the introduction of Klaviyo email marketing. We used data collected with tools ranging from General Instance to Google Analytics to craft a unique user experience centered around maximizing e-commerce revenues while remaining faithful to Kimino’s elegant identity and emphasis of traditional Japanese farming methods. 
 
 <figure>
     <img src="./assets/img/Fukujiro Smile.png">
@@ -16,6 +15,8 @@ We overhauled Kimino's digital profile by redesigning their website and introduc
         Fukujiro with his son and grandson drinking yuzu sparklng water in Shikoku. 
     </figcaption>
 </figure>
+
+# ART DIRECTION 
 
 <figure>
     <img src="./assets/img/Sitting Yuzu Farmers.png">
