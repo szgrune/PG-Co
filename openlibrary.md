@@ -4,29 +4,31 @@ title: Open Library
 ---
 
 
-Read more about the Open Library My Books page redesign process on the [Open Library Blog](https://blog.openlibrary.org/2022/12/27/a-brand-new-my-books-experience/)! This redesign is part of an ongoing design process in collaboration with Open Library to establish a clear and meaningful design system for the organization while simultaneously optimizing and modernizing troublesome interfaces on the platform, which provides millions of users with online access to tens of millions of books. 
+Read more about the Open Library My Books page redesign process on the [Open Library Blog](https://blog.openlibrary.org/2022/12/27/a-brand-new-my-books-experience/)! This redesign is part of an ongoing collaboration with Open Library to establish a clear and meaningful design system for the organization.
 
 # PROBLEM
 
-Open Library patrons and stakeholders alike identified the My Books page as a major pain point in the site’s navigation and information hierarchy. The My Books page serves as the primary location on the site for users to access their books, records of their reading habits, and lists of books, making it a crucial space both for repeat users and new users getting acquainted with the site. The primary problems observed were related to confusing navigation, particularly on mobile.
+Open Library patrons and stakeholders alike identified the My Books page as a major pain point in the site’s navigation and information hierarchy. The My Books page serves as the primary location on the site for users to access their books, records of their reading habits, and lists of books, making it a crucial space both for repeat users and new users getting acquainted with the site.
 
 At the beginning of the project the desktop interface loaded by clicking the ‘My Books’ button in the header looked like this:
 
 <figure>
     <img src="./assets/img/OpenLibraryOGDesktop.png">
     <figcaption align="center">
-        This shows the original landing page for the 'My Books' section of the website, which was actually just the user's Loans page. 
+        The original landing page for the 'My Books' section of the website, which was actually just the user's Loans page
     </figcaption>
 </figure>
 
-Perhaps the most confusing issue with this flow, is that the ‘My Books’ button brought patrons to their account’s Loans page. Another problem that was continually observed with the existing design is the mobile navigation on this page:
+Another problem that was continually observed with the existing design is the mobile navigation on this page:
 
 <figure>
     <img src="./assets/img/OpenLibraryOGMobile.png">
     <figcaption align="center">
-        This shows the original mobile page, which has three confusing layers of navigation at the top. The menu section with the grey background was actually scrollable, though this was not clear from the design.
+        The original menu section with the grey background was actually scrollable, though this was not clear from the design
     </figcaption>
 </figure>
+
+The primary problems observed were related to confusing navigation, particularly on mobile.
 
 The mobile design took the desktop sidebar menu and added it directly below the site header, creating three layers of navigation and a very confusing split in the My Books page interface. This navigation design was neither discoverable nor understandable – many users did not realize the mobile menu of My Books page options is even scrollable, thus losing out on access to over half of the sub-pages (e.g. Want to Read, Already Read, Reading Stats, etc.).
 
@@ -48,7 +50,7 @@ We settled on the following approach for desktop, which includes new carousel se
 <figure>
     <img src="./assets/img/OpenLibraryNewDesktop.png">
     <figcaption align="center">
-        The new desktop interface displays the user's reading stats and organizes their saved books into carousels.
+        The new desktop interface displays the user's reading stats and organizes their saved books into carousels
     </figcaption>
 </figure>
 
@@ -59,7 +61,7 @@ This mobile design not only improves usability and accessibility to the key comp
 <figure>
     <img src="./assets/img/OpenLibraryNewMobile_full.png">
     <figcaption align="center">
-        This composite shows the top and bottom of the redesigned mobile My Books page with sections for the user's books, lists, and stats.
+        The top and bottom of the new mobile My Books page, with sections for the user's books, lists, and stats
     </figcaption>
 </figure>
 
