@@ -4,7 +4,7 @@ title: Open Library
 ---
 
 
-Read more about the Open Library My Books page redesign process on the Open Library Blog [https://blog.openlibrary.org/2022/12/27/a-brand-new-my-books-experience/]! This redesign is part of an ongoing design process in collaboration with Open Library to establish a clear and meaningful design system for the organization while simultaneously optimizing and modernizing troublesome interfaces on the platform, which provides millions of users with online access to tens of millions of books. 
+Read more about the Open Library My Books page redesign process on the [Open Library Blog](https://blog.openlibrary.org/2022/12/27/a-brand-new-my-books-experience/)! This redesign is part of an ongoing design process in collaboration with Open Library to establish a clear and meaningful design system for the organization while simultaneously optimizing and modernizing troublesome interfaces on the platform, which provides millions of users with online access to tens of millions of books. 
 
 # PROBLEM
 
