@@ -3,7 +3,7 @@ layout: default
 title: Kimino Drinks
 ---
 
-![](./assets/img/Collage New.png)
+![](./assets/img/Collage New 1.png)
 
 # ABSTRACT
 
