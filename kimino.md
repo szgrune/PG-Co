@@ -9,6 +9,10 @@ title: Kimino Drinks
 
 After a comprehensive site audit, we overhauled Kimino’s e-commerce with a web redesign and the introduction of Klaviyo email marketing. We used data collected with tools ranging from General Instance to Google Analytics to craft a unique user experience centered around maximizing e-commerce revenues while remaining faithful to Kimino’s elegant identity and emphasis of traditional Japanese farming methods. 
 
+<figure>
+    <img src="./assets/img/Farmers Sippib.jpg">
+    <figcaption align="center">
+
 # ART DIRECTION 
 
 <figure>
