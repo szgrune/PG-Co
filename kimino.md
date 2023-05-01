@@ -12,6 +12,7 @@ After a comprehensive site audit, we overhauled Kimino’s e-commerce with a web
 <figure>
     <img src="./assets/img/Farmers Sippib.jpg">
     <figcaption align="center">
+</figure>
 
 # ART DIRECTION 
 
