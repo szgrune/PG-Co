@@ -3,7 +3,7 @@ layout: default
 title: Kimino Drinks
 ---
 
-![](./assets/img/PG Co. Kimino collage.png)
+![](./assets/img/Collage New.png)
 
 # ABSTRACT
 
