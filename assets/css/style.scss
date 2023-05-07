@@ -216,8 +216,8 @@ input:checked + .slider:before {
 }
 
 .flickity-button {
-    background: none;
-    border: none;
+    background: none !important;
+    border: 0 !important;
 }
 
 /* move page dots into carousel */
