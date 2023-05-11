@@ -3,15 +3,6 @@ layout: about
 title: About
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+George Platt attended Vassar College where he attended a BA in American Studies. George worked at Kimino Drinks for 18 months, during which he served as their brand and creative director. During his redesign of kimino.com, George hired Sam Grunebaum, effectively starting P+G co.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Samuel Grunebaum studied Computer Science and Comparative Literature at Williams College. Since then, he has worked as an educator, developer, and designer for institutions such as Fulbright, the Horace Mann School, and the Internet Archive’s Open Library. Currently, Sam is focused on leveraging his experience at the intersection of tech and instructional design to build usable, accessible, easily maintainable user-facing products.
