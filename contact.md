@@ -51,7 +51,7 @@ title: Contact
                 <div id="email" class="m2">
                     
                     <header id="header" class=" grey lighten-1">
-                        Let Us Know About Your Project
+                        Get in Touch
                     </header>
 
                     <form id="send-mail" action="" class="col s10 offset-s1">
