@@ -57,10 +57,6 @@ title: Contact
                     <form id="send-mail" action="" class="col s10 offset-s1">
                         <div class="row">
                                 <div class="input-field col s12">
-                                    <label for="email">For:</label>
-                                    <input id="email" type="email">
-                                </div>
-                                <div class="input-field col s12">
                                     <label for="subject">Subject:</label>
                                     <input id="subject" type="text">
                                 </div>
@@ -100,7 +96,6 @@ title: Contact
 <script>
   /////////////////////////////Variables//////////////////////////////
 
-  const email = document.getElementById('email');
   const subject = document.getElementById('subject');
   const message = document.getElementById('message');
   const sendBtn = document.getElementById('send');
@@ -115,7 +110,6 @@ title: Contact
       document.addEventListener('DOMContentLoaded', startApp);
 
       //Form camps 
-      email.addEventListener('blur', validateData);
       subject.addEventListener('blur', validateData);
       message.addEventListener('blur', validateData);
 
@@ -143,16 +137,10 @@ title: Contact
 
     //Validates the text.
     validateLength(this);
-
-    //Validates the email 
-    if(this.type == 'email'){
-
-      validateEmail(this);  
-    }
      
     let errors = document.querySelectorAll('.error');
 
-    if(email.value !== '' && subject.value !== '' && message.value!==''){
+    if(subject.value !== '' && message.value!==''){
         if(errors.length === 0){
             sendBtn.disabled = false;
         } 
@@ -178,7 +166,7 @@ title: Contact
      const sent = document.createElement('img');
      sent.src = 'https://www.dropbox.com/s/0g5h91zyozcbenc/mail.gif?raw=1';
      sent.style.display = 'block';
-      var link = `mailto:${email.value}&subject=${escape(subject.value)}&body=${escape(message.value)}`;
+      var link = `mailto:${'george.cc.platt@gmail.com'}&subject=${escape(subject.value)}&body=${escape(message.value)}`;
 
      // timer for the spinner and mail.
      setTimeout(function(){
