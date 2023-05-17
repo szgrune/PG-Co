@@ -14,7 +14,7 @@ title: Contact
   <input type="text" name="name">
   <label for="message">Message:</label>
   <br> 
-  <textarea id=”message”></textarea>
+  <textarea id="message"></textarea>
   <input type="hidden" name="utf8" value="✓">
   <button type="submit">Submit</button>
 </form>
