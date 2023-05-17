@@ -9,9 +9,11 @@ title: Contact
   <label for="email">Your Email:</label>
   <br>  
   <input type="email" name="email">
+  <br>
   <label for="name">Your Name:</label>
   <br>  
   <input type="text" name="name">
+  <br>
   <label for="message">Message:</label>
   <br> 
   <textarea id="message"></textarea>
