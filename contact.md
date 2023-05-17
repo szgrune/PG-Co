@@ -5,7 +5,7 @@ title: Contact
 
 ## Tell Us About Your Project
 
-<form accept-charset="UTF-8" action="https://formkeep.com/f/11be1a86b6d0" enctype="multipart/form-data" method="POST">
+<form accept-charset="UTF-8" action="https://formkeep.com/f/11be1a86b6d0" enctype="multipart/form-data" method="POST" target="_blank">
   <label for="email">Your Email:</label>
   <br>  
   <input type="email" name="email">
