@@ -5,8 +5,12 @@ title: Contact
 
 <style>
   input {
-    width: 100%;
-    padding: 15px 10px; 
+    width: 40%;
+    padding: 5px 5px; 
+  }
+  
+  textarea {
+    width: 100px;
   }
 </style>
 
