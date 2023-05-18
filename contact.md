@@ -14,11 +14,11 @@ title: Contact
     height: 100px;
   }
   
-  label {
-    padding-top: 15px;
+  .contact-input {
+    margin-bottom: 15px;
   }
   
-  button[tyoe="submit"] {
+  button[type="submit"] {
     font-family: 'Folio Book';
     font-size: 16px;
     background: white;
@@ -32,11 +32,11 @@ title: Contact
 <form accept-charset="UTF-8" action="https://formkeep.com/f/11be1a86b6d0" enctype="multipart/form-data" method="POST" target="_blank">
   <label for="email">Email:</label>
   <br>  
-  <input type="email" name="email" placeholder="example@example.com">
+  <input type="email" class="contact-input" name="email" placeholder="example@example.com">
   <br>
   <label for="name">Name:</label>
   <br>  
-  <input type="text" name="name">
+  <input type="text" class="contact-input" name="name">
   <br>
   <label for="message">Message:</label>
   <br> 
