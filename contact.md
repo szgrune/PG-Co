@@ -21,6 +21,7 @@ title: Contact
   button[type="submit"] {
     font-family: 'Folio Book';
     font-size: 16px;
+    color: black;
     background: white;
     border: 1px solid black;
     border-radius: 5px;
