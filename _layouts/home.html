@@ -1,0 +1,240 @@
+{% case site.color-scheme %}
+  {% when "", nil, false, 0, empty %}
+    {% assign ColorScheme = "auto" %}
+  {% else %}
+    {% assign ColorScheme = site.color-scheme %}
+{% endcase %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v="              | append: site.github.build_revision | relative_url }}">
+    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@2/flickity-fade.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+
+        {% comment %}
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        {% endcomment %}
+
+        <div id="menuToggle">
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <div id="burger">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+          
+
+          
+            <ul id="menu">
+              <a href="javascript:;" onclick="showBurgerProjects()" id="burger-projects" class="menu-item">
+                Projects
+                <svg
+                  id="chev-burger"
+                  class="chevron"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <ul id="burgerDropdown" class="dropdown-content">
+                {% for item in site.data.projectmenu.docs %}
+                  <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+              {% for item in site.data.homemenu.docs %}
+                <a href="{{ item.url }}" id="{{ item.title }}" class="menu-item">{{ item.title }}</a>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <label class="switch">
+            <input id="burger-lightDark" type="checkbox" onclick="lightDarkToggle(this)">
+            <span class="slider round"></span>
+            <span class="labels" data-on="dark" data-off="light"></span>
+          </label>
+        </div>
+        <img class="logo" id="lightmode-logo" src="{{site.blacklogo | relative_url}}" alt="Logo" onclick="goHome()"/>
+        <img class="logo" id="darkmode-logo" src="{{site.whitelogo | relative_url}}" alt="Logo" onclick="goHome()"/>
+        
+        <div id="desktopMenu" class="menu">
+          <a href="javascript:;" onclick="showProjects()" id="projects" class="menu-item">Projects</a>
+          <ul id="dropdown" class="dropdown-content">
+            {% for item in site.data.projectmenu.docs %}
+              <li><a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a></li>
+            {% endfor %}
+          </ul>
+          {% for item in site.data.homemenu.docs %}
+            <a href="{{ item.url }}" id="{{ item.title }}" class="menu-item">{{ item.title }}</a>
+          {% endfor %}
+        </div>
+        <div class="desktopSwitch">
+          <label class="switch">
+            <input id="lightDark" type="checkbox" onclick="lightDarkToggle(this)">
+            <span class="slider round"></span>
+            <span class="labels" data-on="dark" data-off="light"></span>
+          </label>
+        </div>
+        <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
+
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header>
+      <section id="home-content">
+        {% if page.title != "Index" %}
+        <a href="{{ "/" | absolute_url }}">Home</a> &raquo; {{ page.title }}
+        <hr style="margin-top: 20px">
+        {% endif %}
+        {{ content }}
+      </section>
+      <footer>
+
+        {% comment %}
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        {% endif %}
+        {% endcomment %}
+
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+
+  <script>
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)'); 
+    if (prefersDarkScheme.matches && localStorage.getItem("darkMode") === null) {
+      localStorage.setItem("darkMode", true);
+    } else if (localStorage.getItem("darkMode") === null) {
+      localStorage.setItem("darkMode", false);
+    }
+
+    
+    if (localStorage.getItem("darkMode") === 'true') {
+      document.documentElement.classList.add('dark-mode');
+      document.getElementById("burger-lightDark").checked = true;
+      document.getElementById("lightDark").checked = true;
+    } else {
+      document.documentElement.classList.remove('dark-mode');
+      document.getElementById("burger-lightDark").checked = false;
+      document.getElementById("lightDark").checked = false;
+    }
+
+    function lightDarkToggle() {
+      if (document.documentElement.classList.contains("dark-mode")){
+
+        document.documentElement.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", false);
+      } else {
+        document.documentElement.classList.add("dark-mode");
+        localStorage.setItem("darkMode", true);
+      }
+    }
+    
+    let clicked = false;
+    let nav = document.getElementsByClassName('menu-item');
+    let pnav = document.getElementsByClassName("dropdown-item");
+    for (let i = 0; i < nav.length; i++){
+      nav[i].addEventListener('mouseover', highlight);
+      nav[i].addEventListener('mouseout', unHighlight);
+    }
+    for (let i = 0; i < pnav.length; i++){
+      pnav[i].addEventListener('mouseover', pHighlight);
+      pnav[i].addEventListener('mouseout', pUnHighlight);
+    }
+
+    function showProjects() {
+      clicked = !clicked;
+      document.getElementById("dropdown").classList.toggle("show");
+      return false;
+    }
+
+    function showBurgerProjects() {
+      clicked = !clicked;
+      document.getElementById("chev-burger").classList.toggle("rotate");
+      document.getElementById("burgerDropdown").classList.toggle("show");
+      return false;
+    }
+
+    function highlight() {
+      if (!clicked) {
+        for (let i = 0; i < nav.length; i++) {
+          if (nav[i] != this) nav[i].style.color = 'grey';
+        }
+      } else {
+        document.getElementById("burger-projects").style.color = 'grey';
+        document.getElementById("projects").style.color = 'grey';
+        this.style.color = '';
+      }
+    }
+
+    function unHighlight(){
+      if (!clicked){
+        for (let i = 0; i < nav.length; i++) {
+          nav[i].style.color = '';
+        }
+      } else {
+        for (let i = 0; i < nav.length; i++) {
+          nav[i].style.color = 'grey';
+        }
+        document.getElementById("burger-projects").style.color = '';
+        document.getElementById("projects").style.color = '';
+      }
+    }
+
+    function pHighlight() {
+        for (let i = 0; i < pnav.length; i++) {
+            if (pnav[i] != this) pnav[i].style.color = 'grey';
+        }
+    }
+
+    function pUnHighlight(){
+        for (let i = 0; i < pnav.length; i++) {
+            pnav[i].style.color = '';
+        }
+    }
+
+    function goHome(){
+      window.location.href = "{{ "/" | absolute_url }}";
+    }
+  </script>
+</html>
