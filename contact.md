@@ -39,9 +39,9 @@ title: Contact
   <br>  
   <input type="text" class="contact-input" name="name">
   <br>
-  <label for="message">Message:</label>
+  <label for="Message">Message:</label>
   <br> 
-  <textarea id="message"></textarea>
+  <textarea name="Message" id="Message" required="required" class="form-control"></textarea>
   <br>
   <input type="hidden" name="utf8" value="✓">
   <button type="submit">Submit</button>
