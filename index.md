@@ -14,9 +14,15 @@ title: Index
     /* You can change the color of your image caption here */
     font-size: 22px !important;
     font-weight: 400;
+    opacity: 1;
   }
 
-  @media screen and (min-width: 768px) {
+  .text-fade {
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  @media screen and (min-width: 721px) {
     .carousel-wrapper {
       position: relative;
     }
@@ -92,17 +98,21 @@ title: Index
   var caption = document.querySelector('.caption');
 
   flkty.on( 'select', function() {
+    $('.caption').fadeOut(500);
+
     // set image caption using img's alt
     if (flkty.selectedElement.id === "1") {
-      caption.textContent = "Kimino Drinks";
       caption.href = "/PG-Co/kimino.html";
+        caption.textContent = "Kimino Drinks";
     } else if (flkty.selectedElement.id === "2") {
-      caption.textContent = "Onside";
       caption.href = "/PG-Co/onside.html";
+      caption.textContent = "Onside";
     } else if (flkty.selectedElement.id === "3") {
-      caption.textContent = "Open Library";
       caption.href = "/PG-Co/openlibrary.html";
+      caption.textContent = "Open Library";
     }
+
+    $('.caption').fadeIn(500);
   });
 
   // window.load( function() {
