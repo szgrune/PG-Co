@@ -25,8 +25,7 @@ whitelogo: ./assets/img/white-logo.png
 chevron: ./assets/img/chevron-down.png
 whitechevron: ./assets/img/white-chevron-down.png
 description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
-url: "https://szgrune.github.io"
-baseurl: "/PG-Co"
+url: "https://www.pgco.dev"
 permalink: date
 
 show_downloads: false
