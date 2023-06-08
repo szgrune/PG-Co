@@ -25,6 +25,7 @@ whitelogo: ./assets/img/white-logo.png
 chevron: ./assets/img/chevron-down.png
 whitechevron: ./assets/img/white-chevron-down.png
 favicon: ./assets/img/favicon.png
+socialcard: ./assets/img/share-card.png
 description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 url: "https://www.pgco.dev"
 permalink: date
