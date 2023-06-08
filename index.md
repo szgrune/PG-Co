@@ -98,7 +98,7 @@ title: Index
   var caption = document.querySelector('.caption');
 
   flkty.on( 'select', function() {
-    $('.caption').fadeOut(500);
+    $('.caption').fadeIn(500);
 
     // set image caption using img's alt
     if (flkty.selectedElement.id === "1") {
@@ -112,7 +112,7 @@ title: Index
       caption.textContent = "Open Library";
     }
 
-    $('.caption').fadeIn(500);
+    $('.caption').fadeOut(500);
   });
 
   // window.load( function() {
