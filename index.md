@@ -14,7 +14,7 @@ title: PG Co.
     /* You can change the color of your image caption here */
     font-size: 22px !important;
     font-weight: 400;
-    opacity: 1;
+    opacity: 0;
   }
 
   .text-fade {
