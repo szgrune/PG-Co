@@ -97,22 +97,22 @@ title: Index
   var caption = document.querySelector('.caption');
 
   flkty.on( 'select', function() {
-    $('.caption').fadeOut(5);
-    $('.caption').fadeIn(500);
+    
+    // $('.caption').fadeOut(500);
+    // $('.caption').fadeIn(500);
 
     // set image caption using img's alt
     if (flkty.selectedElement.id === "1") {
-      caption.href = "/PG-Co/kimino.html";
+      caption.href = "/kimino.html";
         caption.textContent = "Kimino Drinks";
     } else if (flkty.selectedElement.id === "2") {
-      caption.href = "/PG-Co/onside.html";
+      caption.href = "/onside.html";
       caption.textContent = "Onside";
     } else if (flkty.selectedElement.id === "3") {
-      caption.href = "/PG-Co/openlibrary.html";
+      caption.href = "/openlibrary.html";
       caption.textContent = "Open Library";
     }
-
-    $('.caption').fadeOut(500);
+    
   });
 
   // window.load( function() {
