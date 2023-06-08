@@ -14,7 +14,7 @@ title: PG Co.
     /* You can change the color of your image caption here */
     font-size: 22px !important;
     font-weight: 400;
-    opacity: 0;
+    display: none;
   }
 
   .text-fade {
@@ -42,6 +42,7 @@ title: PG Co.
     }
   
   	.caption {
+      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
