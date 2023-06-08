@@ -24,6 +24,7 @@ blacklogo: ./assets/img/black-logo.png
 whitelogo: ./assets/img/white-logo.png
 chevron: ./assets/img/chevron-down.png
 whitechevron: ./assets/img/white-chevron-down.png
+favicon: ./assets/img/favicon.png
 description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.
 url: "https://www.pgco.dev"
 permalink: date
@@ -36,6 +37,7 @@ remote-theme: "godalming123/minimal"
 
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
