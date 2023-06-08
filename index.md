@@ -46,7 +46,6 @@ title: Index
       top: 50%;
       left: 50%;
       opacity: 0;
-      transition: all ease-in-out 0.5s !important;
       transform: translate(-50%, -50%);
   	}
   
@@ -98,6 +97,7 @@ title: Index
   var caption = document.querySelector('.caption');
 
   flkty.on( 'select', function() {
+    $('.caption').fadeOut(5);
     $('.caption').fadeIn(500);
 
     // set image caption using img's alt
