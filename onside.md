@@ -12,6 +12,7 @@ Onside produces apparel and objects associated with the beautiful game. Launched
 <figure>
     <img src="./assets/img/Shirts Quadpanel.png">
     <figcaption align="center">
+</figure>
 
 # ART DIRECTION; PROMOTION 
 
@@ -33,5 +34,5 @@ Onside produces apparel and objects associated with the beautiful game. Launched
 
 <figure>
     <img src="./assets/img/Onside Homepage.png">
-   
-PG co. designed a custom Shopify theme for Onside and integrated the site’s POS with their fulfillment operation. 
+    PG co. designed a custom Shopify theme for Onside and integrated the site’s POS with their fulfillment operation. 
+</figure>
